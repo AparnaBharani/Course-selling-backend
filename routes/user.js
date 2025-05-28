@@ -1,28 +1,29 @@
-function createUserRoutes(app){
-    app.post("/user/signup",function(res,req){
-        res.json({
-            message: "signup endpoint"
-        })
+const { Router } = require("express");
+
+
+
+const userRouter = Router();
+
+userRouter.post("/user/signup",function(res,req){
+    res.json({
+        message: "signup endpoint"
     })
+})
 
 
-    app.post("/user/signin",function(res,req){
-        res.json({
-            message: "signup endpoint"
-        })
+userRouter.post("/user/signin",function(res,req){
+    res.json({
+        message: "signup endpoint"
     })
+})
 
 
-    app.get("/user/purchases",function(res,req){
-        res.json({
-            message: "signup endpoint"
-        })
+userRouter.get("/user/purchases",function(res,req){
+    res.json({
+        message: "signup endpoint"
     })
-
-    
-}
-
+})
 
 module.exports = {
-    createUserRoutes = createUserRoutes
- }
+    userRouter : userRouter
+}
